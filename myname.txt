@@ -3,3 +3,4 @@ Address: Bhaktapur
 College:KIST College
 Hobby:Playing Games
 Second Hobby: Making Games
+Age:21
