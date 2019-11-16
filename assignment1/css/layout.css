@@ -182,6 +182,68 @@
     font-size: 22px;
     font-weight: 300;
 }
+.body-middle
+{
+    background-image: url(../images/background-our-team.png);
+    background-repeat: repeat-x;   
+}
+.body-middle-top 
+{
+    padding-top: 70px;
+    padding-bottom: 76px;
+}
+.body-middle-top h1
+{
+        text-align: center;
+        color: #808c8c;
+        font-size: 42px;
+        font-weight: 400;     
+}
+.hover-menu
+{
+    background-image: url(../images/no-image.png);
+    background-repeat: no-repeat;
+    height: 316px;
+    width: 270px;
+    position: relative;
+}
+.hover-menu-inner
+{
+    display: none;
+    background-color: #90d1cb;
+    background-image: url(../images/hover-panel.png);
+    height: 316px;
+    width: 270px;
+}
+.hover-menu-inner p
+{
+    color:#edffff;
+    font-style: italic;
+    line-height: 24px;
+    font-size: 14px;
+    padding: 38px;
+}
+.hover-menu:hover .hover-menu-inner 
+{
+    display: block;
+}
+.social-button-group
+{
+    padding-left: 38px;
+}
+.social-button-group a
+{
+    margin-right: 8px;
+}
+.hover-menu-button
+{
+    background-color: #757575;
+    height: 70px;
+    width: 60px;
+    position: absolute;
+    bottom: -10px;
+    left: 4px;
+}
 /*body part end*/
 /*footer part*/
 
