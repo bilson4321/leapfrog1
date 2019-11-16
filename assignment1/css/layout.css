@@ -1,0 +1,44 @@
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+/* header part */
+.header-top
+{
+    height: 80px;
+}
+.header-container
+{
+    padding: 0 78px;
+}
+.header-top-left
+{
+    float: left;
+}
+.header-top-right
+{
+    float: right;
+}
+.header-top-right ul
+{
+    list-style: none;
+}
+.header-top-right li
+{
+    float: left;
+} 
+.header-bottom
+{
+    height: 80px;
+}
+/*header part end*/
+/*body part*/
+
+/*body part end*/
+/*footer part*/
+
+/*footer part end */
