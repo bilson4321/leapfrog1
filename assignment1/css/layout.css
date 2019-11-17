@@ -206,11 +206,12 @@
     height: 316px;
     width: 270px;
     position: relative;
+    margin-right: 22px;
 }
 .hover-menu-inner
 {
     display: none;
-    background-color: #90d1cb;
+   
     background-image: url(../images/hover-panel.png);
     height: 316px;
     width: 270px;
@@ -237,12 +238,58 @@
 }
 .hover-menu-button
 {
-    background-color: #757575;
-    height: 70px;
-    width: 60px;
+    background-image: url(../images/hover-menu-button.png);
+    height: 54px;
+    width: 200px;
     position: absolute;
     bottom: -10px;
-    left: 4px;
+    left: 35px;
+    z-index: 10;
+}
+.hover-menu-red-button
+{
+    background-image: url(../images/hover-menu-red-button.png);
+    height: 54px;
+    width: 200px;
+    position: absolute;
+    bottom: -10px;
+    left: 35px;
+    z-index: 20;
+}
+.hover-menu-button-text
+{
+    position: absolute;
+    bottom: 0px;
+    left: 75px;
+    z-index: 30;
+}
+.hover-menu-button-text h2
+{
+    color:white;
+}
+
+.body-bottom
+{
+    background-color: #f3f3f3;
+}
+.body-bottom-top
+{
+    padding-top: 100px;
+}
+.body-bottom-top h1
+{
+    color: red;
+    text-align: center;
+    font-weight: 300;
+}
+.body-bottom-top p
+{
+    padding:24px 116px;
+    text-align: center;
+}
+.body-bottom-bottom
+{
+    padding-top: 24px;
 }
 /*body part end*/
 /*footer part*/
