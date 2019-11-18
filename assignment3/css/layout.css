@@ -2,22 +2,27 @@
 {
     width:100%;
     height:auto;
-    float: left;
 }
 .container-outer
 {
-    margin: 0 auto;
-    padding: 2% 8%;
+    max-width: 20.125em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.clearfix
+{
+    overflow: auto;
 }
 .navbar
 {
     background-color: #76c7c1;
+    padding-left: 1.25rem;
+    width: 100%;
     overflow: auto;
 }
 .header-top
 {
     width: 100%;
-    height: 80px;
     overflow: auto;  
 }
 .column-three
@@ -54,15 +59,17 @@
 
 @media only screen and (min-width: 768px) {
     /* For tablets: */
-    .third
+    .container-outer
     {
-        width: 80%;
+        max-width: 42.9375em;
     }
+
   }
   @media only screen and (min-width: 800px) {
     /* For desktop: */
-    .third{
-        width: 40%;
+    .container-outer
+    {
+        max-width: 73.125em;
     }
     .carousel
     {
