@@ -1,12 +1,12 @@
 .responsive-image
 {
-    max-width:100%;
+    width:100%;
     height:auto;
+    float: left;
 }
 .container-outer
 {
     margin: 0 auto;
-    min-width: 73.1875em;  
     padding: 2% 8%;
 }
 .navbar
