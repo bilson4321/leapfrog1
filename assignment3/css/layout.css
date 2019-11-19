@@ -1,25 +1,30 @@
-.responsive-image
+.navbar
 {
-    width:100%;
-    height:auto;
+    background-color: #76c7c1;
+    padding: 1.25em;
+    max-width: 100%;
 }
 .container-outer
 {
-    max-width: 20.125em;
     margin-left: auto;
     margin-right: auto;
+    max-width: 73.125em;
+}
+.responsive-image
+{
+    width:100%;
+    height:100%;
 }
 .clearfix
 {
     overflow: auto;
 }
-.navbar
+.navbar-logo
 {
-    background-color: #76c7c1;
-    padding-left: 1.25rem;
-    width: 100%;
-    overflow: auto;
+    height: 32px;
+    width: 200px;
 }
+
 .header-top
 {
     width: 100%;
@@ -59,18 +64,12 @@
 
 @media only screen and (min-width: 768px) {
     /* For tablets: */
-    .container-outer
-    {
-        max-width: 42.9375em;
-    }
+ 
 
   }
   @media only screen and (min-width: 800px) {
     /* For desktop: */
-    .container-outer
-    {
-        max-width: 73.125em;
-    }
+  
     .carousel
     {
         max-height: 800px;
