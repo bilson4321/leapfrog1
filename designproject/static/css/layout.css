@@ -96,3 +96,104 @@
 {
     text-decoration: none;
 }
+.welcome-section
+{
+    height: 282px;
+}
+.featured-item-list
+{
+    width: 980px;
+    padding:34px 0;
+}
+.featured-item-heading
+{
+    padding-top: 10px;
+    height: 49px;
+    background-image: url(../images/featured-dot.png);
+    background-repeat: repeat-x;
+}
+.featured-item-card
+{
+    height: 333px;
+    width: 210px;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 9px;
+    margin-right:10px;
+}
+.special-offer-heading
+{
+    height: 49px;
+    background-image: url(../images/featured-dot.png);
+    background-repeat: repeat-x;
+}
+.special-offer-list
+{
+    width: 980px;
+}
+.special-offer-card
+{
+    width: 310px;
+    height: 180px;
+    display: inline-block;
+    margin-right: 14px;
+}
+footer
+{
+    min-width: 980px;
+    background-color: #333333;
+}
+.footer-items
+{
+    padding:44px 0;
+}
+.footer-navigation
+{
+    display: inline-block;
+    width: 136px;
+    padding-right: 35px;
+}
+.navigation-header
+{
+    height: 38px;
+    background-image: url(../images/footer-dot.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.latest-tweets
+{
+   width: 330px; 
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 35px;
+}
+.footer-newsletter
+{
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 18px;
+}
+.footer-about-us
+{
+    width: 184px;
+    display: inline-block;
+    vertical-align: top;   
+}
+.footer-about-us p
+{
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(226, 226, 226);
+    line-height: 1.667;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+figure
+{   
+    display: inline;
+}
+form
+{
+    display: inline-block;
+}
