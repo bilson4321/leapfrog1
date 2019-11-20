@@ -49,6 +49,7 @@
     background-image: url(../images/slide-background.png);
     background-repeat: repeat-x;
     min-width: 980px;
+    height: 522px;
 }
 .carousel
 {
@@ -60,4 +61,38 @@
 {
     margin: 0 auto;
     width: 100%;
+}
+.slide
+{
+    position: relative;
+    height: 502px;
+}
+.slide-heading
+{
+    position: absolute;
+    bottom: 200px;
+    left: 230px;
+    height: 28px;
+    width: 676px;
+    background-color:#cc164f;
+    padding: 23px 24px;
+}
+.slide-description
+{
+    position: absolute;
+    bottom:123px;
+    left: 230px;
+    height:35px;
+    padding: 15px 22px;
+    background-color: #ca154f;
+}
+.dot-group
+{
+    position: absolute;
+    left: 655px;
+    bottom: -11px;
+}
+.dot-group a
+{
+    text-decoration: none;
 }

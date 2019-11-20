@@ -140,3 +140,39 @@ section
     min-width: 980px;
 }
 /* carousel section */
+.slide-heading h1
+{
+    font-size: 40px;
+    font-weight: 100;
+    font-family: "Source Sans Pro";
+    color: rgb(255, 255, 255);
+    text-align: left;  
+    line-height: 0.359;    
+}
+.slide-description p
+{
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(255, 255, 255);
+    line-height: 1.667;
+    text-align: left;
+    width: 527px;
+}
+.dot
+{
+    border: 2px solid red;
+    border-radius: 100%;
+    height: 22px;
+    width: 22px;
+    text-align: center;
+    left: 20px;
+    background-color: #ffffff;
+    display: inline-block;
+}
+.dot h1
+{
+    font-size: 14px;
+    font-family: "Source Sans Pro";
+    color: rgb(204, 0, 62);
+    line-height: 1.429;
+}
