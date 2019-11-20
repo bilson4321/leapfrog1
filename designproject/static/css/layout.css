@@ -189,6 +189,26 @@ footer
     text-align: left;
     text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
+.icon-field
+{
+    width: 179px;
+}
+.contact-us-icon
+{
+    height: 22px;
+    width: 20px;
+    margin-top:22px ;
+    margin-right: 6px;
+    display: inline-block;
+}
+.footer-bar
+{
+    height: 90px;
+    width: 800px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align:center;
+}
 figure
 {   
     display: inline;
