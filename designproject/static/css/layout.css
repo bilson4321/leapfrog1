@@ -130,6 +130,7 @@
 .special-offer-list
 {
     width: 980px;
+    padding: 36px 0px;
 }
 .special-offer-card
 {
@@ -137,6 +138,29 @@
     height: 180px;
     display: inline-block;
     margin-right: 14px;
+}
+.news-container
+{
+    width: 336px;
+    display: inline-block;
+    margin-right: 35px;
+}
+.best-seller
+{
+    width: 295px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 32px;
+}
+.best-seller-list
+{
+    width: 295px;
+}
+.about-contact
+{
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
 }
 footer
 {
@@ -204,11 +228,20 @@ footer
 .footer-bar
 {
     height: 90px;
-    width: 800px;
-    display: inline-block;
+    width: 980px;
     margin: 0 auto;
     text-align:center;
+   
 }
+.copyright
+{
+    width: 800px;
+    display: inline-block;
+    background-image: url(../images/footer-dot.png);
+    background-repeat: repeat-x;
+    padding-top: 18px;
+}
+
 figure
 {   
     display: inline;

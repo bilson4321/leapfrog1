@@ -298,6 +298,121 @@ section
         font-weight: 100; 
         padding-top: 15px;
 }
+.news-aboutus-heading
+{
+    height: 49px;
+    background-image: url(../images/featured-dot.png);
+    background-repeat: repeat-x;
+}
+.news-aboutus-heading h1
+{
+    font-size: 24px;
+    font-family: "Source Sans Pro";
+    font-weight: 100;
+    color: rgb(51, 51, 51);
+    line-height: 0.599;
+    text-align: left;    
+}
+.news h1
+{
+    font-size: 18px;
+    font-family: "Source Sans Pro";
+    color: rgb(204, 0, 62);
+    line-height: 0.718;  
+    font-weight: 100;
+    padding-top: 32px;
+}
+.news span
+{
+    display: block;
+        font-size: 11px;
+        font-family: "Arial";
+        color: rgb(138, 138, 138);
+        line-height: 1.636;
+        text-align: left; 
+        padding-top: 16px;
+}
+.news p
+{
+    padding-top: 15px;
+        font-size: 11px;
+        font-family: "Arial";
+        color: rgb(51, 51, 51);
+        line-height: 1.667;
+        text-align: left;
+    padding-bottom: 12px;
+    background-image: url(../images/news-seprator.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.seller
+{
+    height: 161px;
+    width: 122px;
+    background-color:#ffffff ;
+    padding:8px;
+    display: inline-block;
+    position: relative;
+    margin-right: 7px;
+    margin-top: 20px;
+}
+.sale-ribbon
+{
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+.seller h1
+{
+    padding-top: 12px;
+    font-size: 22px;
+    font-weight: 100;
+    font-family: "Source Sans Pro";
+    color: rgb(204, 0, 62);
+    line-height: 0.653;
+    text-align: center;
+}
+.best-seller-list
+{
+    padding-top: 12px;
+}
+.about-contact p
+{
+        font-size: 12px;
+        font-family: "Arial";
+        color: rgb(51, 51, 51);
+        line-height: 1.667;
+        text-align: left;
+        margin-top: 30px;
+}
+.about-contact h2
+{
+        font-size: 32px;
+        font-family: "Source Sans Pro";
+        font-weight: 300;
+        color: rgb(51, 51, 51);
+        line-height: 0.449;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        display: inline-block;   
+        margin-top: 36px;
+}
+.about-contact h3
+{
+        font-size: 18px;
+        font-family: "Source Sans Pro";
+        font-weight: 100;
+        color: rgb(51, 51, 51);
+        line-height: 0.798;
+        text-align: left;
+        text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.004);
+        display: inline-block;
+        margin-top: 26px;
+}
+.readmore
+{
+    color:#cc003e;
+}
 .navigation-header h1
 {
         font-size: 24px;
@@ -372,5 +487,13 @@ section
 {
     display: inline-block;
     width: 70%;
+}
+.copyright p
+{
+        font-size: 11px;
+        font-family: "Arial";
+        color: rgb(144, 144, 144);
+        line-height: 1.636;
+       display: inline-block;
 }
 
