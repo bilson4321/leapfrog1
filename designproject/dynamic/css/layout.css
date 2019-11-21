@@ -1,0 +1,263 @@
+.container-outer
+{
+    margin:0 auto;
+    width: 980px;
+}
+.header-top
+{
+    padding-top: 26px;
+    width: 980px;
+    height: 36px;
+}
+.brand-logo
+{
+    width: 338px;
+    display: inline-block;
+}
+/*header login part*/
+.header-middle
+{
+    width: auto;
+    height: 71px;
+    background-image: url(../images/header-middle-dot.png);
+    background-repeat: repeat-x;
+}
+.header-login-form
+{
+    padding: 20px 0px;
+}
+.user-menu
+{
+    width: 638px;
+    display: inline-block;
+    margin-left: auto;
+}
+
+.navbar
+{
+    height: 56px;
+}
+.navbar-search
+{
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    float: right;
+    height: 32px;
+    width: 171px;
+    padding-top: 6px;
+    background-color: #ffffff;
+}
+.navbar-search input
+{
+    width: 80%;
+}
+.carousel-background
+{
+    background-image: url(../images/slide-background.png);
+    background-repeat: repeat-x;
+    min-width: 980px;
+    height: 522px;
+}
+.carousel
+{
+    margin: 0 auto;
+    min-width: 980px;
+    max-width: 1440px;
+}
+.slide img
+{
+    margin: 0 auto;
+    width: 100%;
+}
+.slide
+{
+    position: relative;
+    height: 502px;
+}
+.slide-heading
+{
+    position: absolute;
+    bottom: 200px;
+    left: 230px;
+    height: 28px;
+    width: 676px;
+    background-color:#cc164f;
+    padding: 23px 24px;
+}
+.slide-description
+{
+    position: absolute;
+    bottom:123px;
+    left: 230px;
+    height:35px;
+    padding: 15px 22px;
+    background-color: #ca154f;
+}
+.dot-group
+{
+    position: absolute;
+    left: 655px;
+    bottom: -11px;
+}
+.dot-group a
+{
+    text-decoration: none;
+}
+.welcome-section
+{
+    height: 282px;
+}
+.featured-item-list
+{
+    width: 980px;
+    padding:34px 0;
+}
+.featured-item-heading
+{
+    padding-top: 10px;
+    height: 49px;
+    background-image: url(../images/featured-dot.png);
+    background-repeat: repeat-x;
+}
+.featured-item-card
+{
+    height: 333px;
+    width: 210px;
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 9px;
+    margin-right:10px;
+    margin-top: 26px;
+    position: relative;
+}
+.special-offer-heading
+{
+    height: 49px;
+    background-image: url(../images/featured-dot.png);
+    background-repeat: repeat-x;
+}
+.special-offer-list
+{
+    width: 980px;
+    padding: 36px 0px;
+}
+.special-offer-card
+{
+    width: 310px;
+    height: 180px;
+    display: inline-block;
+    margin-right: 14px;
+}
+.news-container
+{
+    width: 336px;
+    display: inline-block;
+    margin-right: 35px;
+}
+.best-seller
+{
+    width: 295px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 32px;
+}
+.best-seller-list
+{
+    width: 295px;
+}
+.about-contact
+{
+    width: 252px;
+    display: inline-block;
+    vertical-align: top;
+}
+footer
+{
+    min-width: 980px;
+    background-color: #333333;
+}
+.footer-items
+{
+    padding:44px 0;
+}
+.footer-navigation
+{
+    display: inline-block;
+    width: 136px;
+    padding-right: 35px;
+}
+.navigation-header
+{
+    height: 38px;
+    background-image: url(../images/footer-dot.png);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+.latest-tweets
+{
+   width: 330px; 
+   display: inline-block;
+   vertical-align: top;
+   margin-right: 35px;
+}
+.footer-newsletter
+{
+    width: 230px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 18px;
+}
+.footer-about-us
+{
+    width: 184px;
+    display: inline-block;
+    vertical-align: top;   
+}
+.footer-about-us p
+{
+    font-size: 12px;
+    font-family: "Arial";
+    color: rgb(226, 226, 226);
+    line-height: 1.667;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+}
+.icon-field
+{
+    width: 179px;
+}
+.contact-us-icon
+{
+    height: 22px;
+    width: 20px;
+    margin-top:22px ;
+    margin-right: 6px;
+    display: inline-block;
+}
+.footer-bar
+{
+    height: 90px;
+    width: 980px;
+    margin: 0 auto;
+    text-align:center;
+   
+}
+.copyright
+{
+    width: 800px;
+    display: inline-block;
+    background-image: url(../images/footer-dot.png);
+    background-repeat: repeat-x;
+    padding-top: 18px;
+}
+
+figure
+{   
+    display: inline;
+}
+form
+{
+    display: inline-block;
+}
+@media 
