@@ -1,51 +1,3 @@
-// var slide = 1000;
-// var count = 0;
-// var noOfImages = 0;
-
-// var roll = document.getElementById('image-wrapper');
-// var rightButton = document.getElementById("right-button");
-// var leftButton = document.getElementById("left-button");
-// var indicators = document.getElementById("indicators");
-// console.log(roll.ch);
-// noOfImages = roll.childElementCount;
-// for (var i = 0; i <noOfImages; i++) {
-//   var dot=document.createElement("div");
-//   dot.style.height="10px";
-//   dot.style.width="10px";
-//   dot.style.margin="10px";
-//   dot.style.backgroundColor="green";
-//   dot.style.display="inline-block";
-//   indicators.appendChild(dot);
-//   // indicators.appendChild();
-// }
-
-// rightButton.onclick = function () {
-//   console.log("clicked");
-//   if (count == noOfImages) {
-//     count = (count) % noOfImages;
-//   }
-//   roll.style.left = -count * slide + "px";
-//   count++;
-// };
-// leftButton.onclick = function () {
-//   console.log("clicked");
-//   if (count == 0) {
-//     count = noOfImages;
-//   }
-//   count--;
-//   roll.style.left = -count * slide + "px";
-
-// };
-
-// // var image=document.getElementsByTagName('img');
-
-// setInterval(function () {
-//   if (count == noOfImages) {
-//     count = (count) % noOfImages;
-//   }
-//   roll.style.left = -count * slide + "px";
-//   count++;
-// }, 5000);
 
 var container=document.getElementById('image-wrapper');
 var imageArray=container.children;
@@ -74,8 +26,7 @@ for(var a=0;a<imageArray.length;a++)
    dot.onclick= function(){ 
                   //           moveToDiv();
                             
-                             console.log('data-id>>',dot.getAttribute("data-id"));
-                              
+                           
                               };
                             
     indicators.appendChild(dot);
@@ -149,15 +100,12 @@ function moveToDiv(index)
     multiplier=index-currentIndex;
     currentIndex=index;
     moveRight(container,multiplier*1000);
-    console.log("index>>",currentIndex);
   }
   else if(index<currentIndex)
   {
     multiplier=currentIndex-index;
     currentIndex=index;
-    console.log("multiplier>>",multiplier);
     moveLeft(container,multiplier*1000);    
-    console.log("index>>",currentIndex);
   }
   indicators.children[currentIndex].style.border="4px solid green";
 }
