@@ -1,0 +1,32 @@
+#box-container
+{
+    height: 620px;
+    width: 80%;
+    margin: 0 auto;
+    border: 4px;
+    border-color: black;
+    border-width:2px;
+    border-style:solid;
+    position: relative;
+}
+.box
+{
+    border: 1px solid brown;
+    position: absolute;
+}
+
+#ant-container
+{
+    height: 620px;
+    width: 80%;
+    margin: 0 auto;
+    border: 4px;
+    border-color: black;
+    border-width:2px;
+    border-style:solid;
+    position: relative;
+}
+.ant
+{
+    position: absolute;
+}

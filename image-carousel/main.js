@@ -23,11 +23,9 @@ for(var a=0;a<imageArray.length;a++)
     dot.style.backgroundColor="red";
     dot.style.cssFloat="left";
     
-   dot.onclick= function(){ 
-                  //           moveToDiv();
-                            
-                           
-                              };
+   dot.onclick= function(b){ 
+                          moveToDiv(b);
+                        }.bind(null,a);
                             
     indicators.appendChild(dot);
 }
