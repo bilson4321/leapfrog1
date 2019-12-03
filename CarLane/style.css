@@ -1,15 +1,8 @@
-#container
-{
-    border:1px solid black;
-    height: 640px;
-    width: 780px;
-    margin: 0 auto;
-}
 #screen
 {
+    margin: 0 auto;
     height: 600px;
     width: 450px;
-    position: relative;
     top: 0;
     left: 0;
     border:1px solid green;
@@ -27,4 +20,9 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+.button
+{
+    height: 40px;
+    width: 40px;
 }
