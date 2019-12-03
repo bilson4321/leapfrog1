@@ -330,7 +330,7 @@ function Opponent(screenDiv)
     this.init=function()
     {
         var temp=document.createElement('img');
-        temp.src="ambulance.gif";
+        temp.src="audi.png";
         temp.classList.add('opponent');
         temp.style.height=this.height+'px';
         temp.style.width=this.width+'px';
@@ -414,7 +414,7 @@ function Player(screenDiv,gameInfo)
     this.init=function()
     {
         var temp=document.createElement('img');
-        temp.src="audi.png";
+        temp.src="ambulance.gif";
         temp.classList.add('player');
         temp.style.width=this.width+"px";
         temp.style.height=this.height+"px";
@@ -430,9 +430,12 @@ function Player(screenDiv,gameInfo)
             this.velocity.x=-69;
             else if(event.keyCode==87)
             {
-                console.log("shoot");
-                this.gameClass.gameObjects[3].position.y=10;
+                if(this.gameClass.gameObjects[3].state="idle")
+                {
+                this.gameClass.gameObjects[3].position.y=500;
+                this.gameClass.gameObjects[3].position.x=this.position.x+30;
                 this.gameClass.gameObjects[3].state="shooting";
+                }
             }
         }.bind(this));
         this.htmlParentElement.appendChild(temp);
