@@ -29,7 +29,7 @@ class Game
         this.gameWorld=new GameWorld();
         this.gameOver=new GameOver();
     
-        this.canvas.addEventListener('click',function(event)
+        this.parentHtmlElement.addEventListener('click',function(event)
                                         {
                                             switch(Game.gameState.currentState)
                                             {
@@ -82,5 +82,3 @@ class Game
 let mainDiv=document.getElementById('container');
 let game=new Game(mainDiv);
 game.start();
-
-

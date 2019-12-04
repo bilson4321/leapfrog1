@@ -71,7 +71,7 @@ class Bird
             canvasContext.translate(-this.position.x - this.width / 2, -this.position.y - this.height / 2);*/
             canvasContext.drawImage(this.birdFrame[this.currentFrame],this.position.x,this.position.y,this.width,this.height);
             this.tickCount++;
-            if(this.tickCount<100)
+            if(this.tickCount>2)
             {
                 this.tickCount=0;
                 this.currentFrame++;

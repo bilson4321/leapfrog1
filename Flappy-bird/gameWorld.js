@@ -8,7 +8,6 @@ class GameWorld
         {
             this.bird.angle=10;
             this.bird.velocity.y=-7;
-            console.log("clicked");
         }.bind(this);
 
     }
@@ -20,7 +19,6 @@ class GameWorld
     { 
         if(this.bird.state=='alive')
         {
-            console.log("bird state>>",this.bird.state);
             this.bird.update();
             this.obstacle.update();
         }

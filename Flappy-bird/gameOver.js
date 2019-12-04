@@ -4,6 +4,7 @@ class GameOver
     {
         this.displayImage=new Image();
         this.displayImage.src='GameOverSprite.png';
+        this.highScore=localStorage.getItem('highscore');
     }
     handleInput()
     {
@@ -11,16 +12,15 @@ class GameOver
     }
     update()
     {
-        /*
-        let highScore=localStorage.getItem('highscore');
-        if(highScore==Nan)
+        if(this.highScore==null)
         {
-            highScore=Game.score;
+            this.highScore=Game.score;
         }
-        else if(Game.score>highScore)
+        else if(Game.score>this.highScore)
         {
-            highScore=Game.score;
-        }*/
+            this.highScore=Game.score;
+        }
+        localStorage.setItem('highscore',this.highScore);
     }
     draw(canvasContext)
     {
@@ -29,6 +29,6 @@ class GameOver
         canvasContext.fillStyle = "black";
         canvasContext.textAlign = "center";
         canvasContext.fillText(Game.score,335,230);
-        canvasContext.fillText(Game.score,335,230);
+        canvasContext.fillText(this.highScore,335,280);
     }
 }
