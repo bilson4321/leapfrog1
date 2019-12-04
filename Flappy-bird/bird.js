@@ -21,7 +21,7 @@ class Bird
         this.birdFrame[3].src="bird-4.png";
         this.currentFrame=0;
         this.tickCount=0;
-        //
+        /*
         document.onclick=function() 
         {
             this.angle=10;
@@ -34,7 +34,7 @@ class Bird
             this.velocity.y=-7;
             console.log("clicked");
         }.bind(this); 
-        
+        */
         this.obstacles=obstacle;
         this.pipesObstacle=this.obstacles.pipes;
     }

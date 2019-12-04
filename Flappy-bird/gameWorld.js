@@ -2,17 +2,19 @@ class GameWorld
 {
     constructor()
     {
-        this.backgroundImage=new Image();
-        this.backgroundImage.src="background.png";
         this.obstacle=new Obstacle();
         this.bird=new Bird(this.obstacle);
-    }
-    handleClickInput()
-    {   
-
+        this.click=function()
+        {
             this.bird.angle=10;
             this.bird.velocity.y=-7;
             console.log("clicked");
+        }.bind(this);
+
+    }
+    handleClickInput()
+    {   
+           this.click();
     }
     update()
     { 
@@ -23,18 +25,25 @@ class GameWorld
             this.obstacle.update();
         }
         else{
-           // Game.gameState.currentState=Game.gameState.gameOver;
+             Game.gameState.currentState=Game.gameState.gameOver;
         }
     }
     draw(canvasContext)
     {
-       
-        canvasContext.drawImage(this.backgroundImage,0,0,450,600);
         this.obstacle.draw(canvasContext);
         this.bird.draw(canvasContext);
         canvasContext.font = "60px Arial";
         canvasContext.fillStyle = "white";
         canvasContext.textAlign = "center";
         canvasContext.fillText(Game.score,220,100);
+    }
+    reset()
+    {
+        this.bird.state='alive';
+        this.bird.velocity.y=1;
+        this.obstacle.pipes.length=0;
+        this.obstacle.pipes[0]={x:450,y:-200};  
+        this.bird.position.y=300;
+        Game.score=0;
     }
 }

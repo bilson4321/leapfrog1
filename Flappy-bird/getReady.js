@@ -15,6 +15,6 @@ class GetReady
     }
     draw(canvasContext)
     {
-        canvasContext.drawImage(this.displayImage,25,50);
+        canvasContext.drawImage(this.displayImage,0,0,450,600);
     }
 }
