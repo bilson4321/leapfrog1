@@ -155,7 +155,10 @@ var game=new Game(mainDiv);
 game.init();
 game.start();
 */
+//--------------------------------Utility-----------------------------------//
 
+
+//-----------------------------------Game-------------------------------------//
 function Game(screenDiv)
 {
     this.screenHtmlElement=screenDiv;
@@ -313,8 +316,9 @@ function Bullet(screenDiv)
     }
 
 }
-function Opponent(screenDiv)
+function Opponent(screenDiv,gameInfo)
 {
+    this.gameClass=gameInfo;
     this.htmlParentElement=screenDiv;
     this.htmlElement=null;
     this.position={
@@ -346,6 +350,14 @@ function Opponent(screenDiv)
         this.position.y=this.position.y+this.velocity.y;
         if(this.position.y>700)
         this.position.y=0;
+        var enemy=this.gameClass.gameObjects[2];
+        if (enemy.x < this.position.x + this.width &&
+            enemy.x + this.width > this.position.x &&
+            enemy.y < this.position.y + this.height &&
+            enemy.y + enemy.height > rect2.y) 
+        {
+              
+         }
     }
     this.draw=function()
     {
