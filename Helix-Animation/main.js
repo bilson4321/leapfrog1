@@ -115,7 +115,7 @@ class Column
     {
         for(var i=0;i<2;i++)
         {
-            this.ballGroup[i]=new BallGroup(this.position.x,this.position.y+i*this.height);
+            this.ballGroup[i]=new BallGroup(this.position.x,this.position.y+i*200);
             //this.ballGroup[i]=new Ball(this.position.x,this.position.y+i*300);
             this.ballGroup[i].init();
         }
@@ -147,7 +147,7 @@ class BallGroup
     {
         for(var i=0;i<10;i++)
         {
-            this.balls[i]=new Ball(this.position.x,this.position.y+i*40);
+            this.balls[i]=new Ball(this.position.x,this.position.y+i*20);
         }
     }
     draw(canvasContext)
@@ -163,7 +163,7 @@ class Ball
 {
     constructor(x,y)
     {
-        this.maxRadius=20;
+        this.maxRadius=15;
         this.minRadius=5;
         this.radius=this.maxRadius;
         this.position={x:x,y:y};
@@ -211,10 +211,12 @@ mainDiv.appendChild(canvas);
 var canvasContext=canvas.getContext('2d');
 
 var animation=[];
+var angle=90;
 for(var i=0;i<15;i++)
 {
-    animation[i]=new Column((i*45)+100,(i*15));
+    animation[i]=new Column((i*45)+100,(100+(80*Math.cos(angle*3.47/180))));
     animation[i].init();
+    angle-=10;
 }
 var render=function()
 {
