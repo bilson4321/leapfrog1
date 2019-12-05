@@ -213,7 +213,7 @@ var canvasContext=canvas.getContext('2d');
 var animation=[];
 for(var i=0;i<15;i++)
 {
-    animation[i]=new Column((i*45)+100,(i*25));
+    animation[i]=new Column((i*45)+100,(i*15));
     animation[i].init();
 }
 var render=function()
