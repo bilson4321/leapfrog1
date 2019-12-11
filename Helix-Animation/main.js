@@ -193,7 +193,7 @@ class Ball
     draw(canvasContext)
     {
         canvasContext.beginPath();
-        canvasContext.arc(this.position.x,this.position.y,this.radius,0, 2 * Math.PI);
+        canvasContext.arc(this.position.x,this.position.y,18,0, 2 * Math.PI);
         if(this.positionincrementdecrement>0)
             canvasContext.fillStyle="pink";
         else
