@@ -273,7 +273,7 @@ function PlayingScreen(screenDiv,gameInfo)
     {
         this.gameObjects.forEach(function(item,index,arr){
             arr[index].update();
-        });
+        }); 
     }
     this.draw=function()
     {
@@ -358,11 +358,13 @@ function Opponent(screenDiv,gameInfo,positionX)
     }
     this.update=function()
     {
-        if(!this.gameOver)
+        if(!this.gameClass.gameOver)
         {
         if(this.State!='away')
         this.position.y=this.position.y+this.velocity.y;
 
+        if(this.position.y>700&&this.position.y<750)
+        this.gameClass.score++;
         if(this.position.y>700)
         {
             this.State='away';
@@ -382,12 +384,34 @@ function Opponent(screenDiv,gameInfo,positionX)
             enemy.position.x + enemy.width > this.position.x &&
             enemy.position.y < this.position.y + this.height &&
             enemy.position.y + enemy.height > this.position.y) 
-            this.gameOver=true;
+            this.gameClass.gameOver=true;
+
+            var bullet=this.gameClass.gameObjects[1];
+            if (bullet.position.x < this.position.x + this.width &&
+                bullet.position.x + bullet.width > this.position.x &&
+                bullet.position.y < this.position.y + this.height &&
+                bullet.position.y + bullet.height > this.position.y) 
+               {
+                   if(bullet.state=='shooting'&&this.State!='away')
+                    {
+                        this.position.y=800;
+                        this.counter=Math.floor(getRandomArbitrary(100,600));
+                        
+                    }
+               }
         }  
-        if(this.gameOver)  
+        if(this.gameClass.gameOver)  
         {
             this.htmlParentElement.innerHTML="Game Over your Score is:"+this.gameClass.score;
             this.htmlParentElement.style.textAlign='center';
+            document.addEventListener('keyDown',function(event){
+                        if(event.keyCode==36)
+                        {
+                            console.log('restart');
+                            location.reload();
+                        }
+                       
+            });
         }
     }
     this.draw=function()
@@ -489,8 +513,6 @@ function Player(screenDiv,gameInfo)
                 this.gameClass.gameObjects[1].state="shooting";
                 }
             }
-            else if(event.keyCode==36&&this.gameClass.gameOver)
-                location.reload();
         }.bind(this));
         this.htmlParentElement.appendChild(temp);
         this.htmlElement=temp;
