@@ -156,7 +156,9 @@ game.init();
 game.start();
 */
 //--------------------------------Utility-----------------------------------//
-
+function getRandomArbitrary(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
 //-----------------------------------Game-------------------------------------//
 function Game(screenDiv)
@@ -177,7 +179,7 @@ function Game(screenDiv)
     
     this.start=function()
     {
-        setInterval(render.bind(this),10);
+        setInterval(render.bind(this),20);
     }
     function render()
     {
@@ -190,7 +192,6 @@ function Game(screenDiv)
 
         //draw
         this.state[this.currentState].draw();
-        console.log(this.currentState);
     }
 }
 //---------------------------Title Screen------------------------------///
@@ -237,6 +238,8 @@ function PlayingScreen(screenDiv,gameInfo)
     this.gameClass=gameInfo;
     this.htmlElement=null;
     this.gameObjects=[];
+    this.score=0;
+    this.gameOver=false;
     this.init=function()
     {
         var div=document.createElement('div');
@@ -248,12 +251,18 @@ function PlayingScreen(screenDiv,gameInfo)
         this.parentHtmlElement.appendChild(div);
         var road=new Road(this.htmlElement).init();
         this.gameObjects.push(road);
-        var player=new Player(this.htmlElement,this).init();
-        this.gameObjects.push(player);
-        var opponent=new Opponent(this.htmlElement).init();
-        this.gameObjects.push(opponent);
         var bullet=new Bullet(this.htmlElement).init();
         this.gameObjects.push(bullet);
+        var player=new Player(this.htmlElement,this).init();
+        this.gameObjects.push(player);
+        var opponent=new Opponent(this.htmlElement,this,90).init();
+        this.gameObjects.push(opponent);
+        var opponent1=new Opponent(this.htmlElement,this,159).init();
+        this.gameObjects.push(opponent1);
+        var opponent2=new Opponent(this.htmlElement,this,228).init();
+        this.gameObjects.push(opponent2);
+        var opponent3=new Opponent(this.htmlElement,this,297).init();
+        this.gameObjects.push(opponent3);
         return this;
     }
     this.handleInput=function()
@@ -316,14 +325,14 @@ function Bullet(screenDiv)
     }
 
 }
-function Opponent(screenDiv,gameInfo)
+function Opponent(screenDiv,gameInfo,positionX)
 {
     this.gameClass=gameInfo;
     this.htmlParentElement=screenDiv;
     this.htmlElement=null;
     this.position={
-                    x:90,
-                    y:0
+                    x:positionX,
+                    y:800
                     };
     this.velocity={
                     x:0,
@@ -331,6 +340,8 @@ function Opponent(screenDiv,gameInfo)
                     };
     this.height=100;
     this.width=60;
+    this.State='visible';
+    this.counter=Math.floor(getRandomArbitrary(60,400));;
     this.init=function()
     {
         var temp=document.createElement('img');
@@ -347,22 +358,45 @@ function Opponent(screenDiv,gameInfo)
     }
     this.update=function()
     {
-        this.position.y=this.position.y+this.velocity.y;
-        if(this.position.y>700)
-        this.position.y=0;
-        var enemy=this.gameClass.gameObjects[2];
-        if (enemy.x < this.position.x + this.width &&
-            enemy.x + this.width > this.position.x &&
-            enemy.y < this.position.y + this.height &&
-            enemy.y + enemy.height > rect2.y) 
+        if(!this.gameOver)
         {
-              
-         }
+        if(this.State!='away')
+        this.position.y=this.position.y+this.velocity.y;
+
+        if(this.position.y>700)
+        {
+            this.State='away';
+            this.counter=Math.floor(getRandomArbitrary(100,600));
+            this.position.y=-40;
+        }
+          
+        this.counter--;
+        if(this.counter==0)
+        {
+            this.State='visible';
+            
+        }
+        
+        var enemy=this.gameClass.gameObjects[2];
+        if (enemy.position.x < this.position.x + this.width &&
+            enemy.position.x + enemy.width > this.position.x &&
+            enemy.position.y < this.position.y + this.height &&
+            enemy.position.y + enemy.height > this.position.y) 
+            this.gameOver=true;
+        }  
+        if(this.gameOver)  
+        {
+            this.htmlParentElement.innerHTML="Game Over your Score is:"+this.gameClass.score;
+            this.htmlParentElement.style.textAlign='center';
+        }
     }
     this.draw=function()
     {
-        this.htmlElement.style.left=this.position.x+'px';
-        this.htmlElement.style.top=this.position.y+'px';
+        if(this.State!='away')
+        {
+            this.htmlElement.style.left=this.position.x+'px';
+            this.htmlElement.style.top=this.position.y+'px';
+        } 
     }
 
 }
@@ -435,20 +469,28 @@ function Player(screenDiv,gameInfo)
         temp.style.left=this.position.x+"px";
         document.addEventListener('keyup', function (event) 
         {
-            console.log("pressed>>",event.keyCode)
             if(event.keyCode==68)
-            this.velocity.x=69;
-            else if(event.keyCode==65)
-            this.velocity.x=-69;
-            else if(event.keyCode==87)
             {
-                if(this.gameClass.gameObjects[3].state="idle")
+                if(this.position.x<297)
+                this.velocity.x=69;
+            }
+            else if(event.keyCode==65)
+            {
+                if(this.position.x>90)
+                this.velocity.x=-69;
+            }
+            
+            else if(event.keyCode==87||event.keyCode==36)
+            {
+                if(this.gameClass.gameObjects[1].state=="idle")
                 {
-                this.gameClass.gameObjects[3].position.y=500;
-                this.gameClass.gameObjects[3].position.x=this.position.x+30;
-                this.gameClass.gameObjects[3].state="shooting";
+                this.gameClass.gameObjects[1].position.y=500;
+                this.gameClass.gameObjects[1].position.x=this.position.x+30;
+                this.gameClass.gameObjects[1].state="shooting";
                 }
             }
+            else if(event.keyCode==36&&this.gameClass.gameOver)
+                location.reload();
         }.bind(this));
         this.htmlParentElement.appendChild(temp);
         this.htmlElement=temp;
@@ -458,6 +500,7 @@ function Player(screenDiv,gameInfo)
     {
         this.position.x=this.position.x+this.velocity.x;
         this.velocity.x=0;
+        
     }
     this.draw=function()
     {
